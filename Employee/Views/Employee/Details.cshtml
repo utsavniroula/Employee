@@ -1,0 +1,33 @@
+﻿@model EmployeeInformation
+
+@{
+}
+
+<div class="col-xl-5 col-lg-5 col-md-6 col-10 m-auto mt-5 mb-5" style="border-radius: 3px; background-color: rgb(239, 239, 239);">
+
+    <form class="ps-3 pe-3 pt-4 pb-4" method="post">
+        <h2 style="font-family: 'Oswald',sans-serif;">Employee Details</h2>
+        <div class="mb-2">
+            <label for="Name" class="form-label">Id</label>
+            <input type="text" class="form-control" asp-for="Id" readonly>
+            <span asp-validation-for="Id" class="text-danger"></span>
+        </div>
+        <div class="mb-2">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" asp-for="Name">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-2">
+            <label for="Address" class="form-label">Address</label>
+            <input type="text" class="form-control" asp-for="Address">
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="mb-2">
+            <label for="Salary" class="form-label">Salary</label>
+            <input type="number" class="form-control" asp-for="Salary">
+            <span asp-validation-for="Salary" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-dark w-100 mt-2">Update</button>
+        <button asp-controller="Employee" asp-action="Delete" class="btn btn-dark w-100 mt-2">Delete</button>
+    </form>
+</div>
